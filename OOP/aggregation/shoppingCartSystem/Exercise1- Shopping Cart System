@@ -1,0 +1,9 @@
+Problem: Build an e-commerce system where products exist in a catalog and customers add them to shopping carts. 
+This exercise practices aggregation where parts (products) are shared across multiple wholes (carts) and survive when a cart is cleared.
+
+Requirements:
+
+Product with a name and price.
+Catalog with a list of Product objects. A findByName(name) method that returns the matching product.
+Cart with a list of Product objects. addItem(product) and clearCart() methods. A getTotal() method that sums the prices.
+Customer with a name and a Cart. A checkout() method that prints the cart contents and total, then clears the cart.

@@ -1,0 +1,10 @@
+Exercise 2: Social Network
+Design Social Network Classes
+Problem: Build a social network where users can follow each other and send messages. This exercise practices bidirectional and many-to-many associations with synchronization guards.
+
+Requirements:
+
+User with a name, a followers list, a following list, and a messages list of Message objects.
+follow(user) method that adds the target to following and adds this to the target's followers. Include a duplicate guard to prevent infinite recursion and self-follows.
+Message with an author (User reference), content string, and timestamp string. The author's messages list is updated on creation.
+sendMessage(content, timestamp) that creates a Message and adds it to the user's messages list.

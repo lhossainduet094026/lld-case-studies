@@ -1,0 +1,6 @@
+Problem : Design Online Course Platform
+
+Problem: Build a course platform where instructors create courses and students enroll in them. 
+This exercise practices unidirectional and one-to-many associations.
+
+Finding: In real system course and student should be in bi-directional relationship.
