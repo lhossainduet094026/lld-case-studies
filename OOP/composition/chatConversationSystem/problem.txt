@@ -1,0 +1,11 @@
+Design Chat Conversation System
+
+Problem: A Conversation composes Message objects. 
+Messages are created when sendMessage(sender, text) is called. 
+Deleting a conversation deletes all its messages. Messages belong to exactly one conversation and have no meaning outside of it.
+
+Requirements:
+
+Message with a sender name, text, and a timestamp. A display() method that prints the message.
+Conversation with a title and a list of Message objects. A sendMessage(sender, text) method that creates a Message internally. 
+A printHistory() method that prints all messages. A delete() method that clears all messages.
