@@ -1,0 +1,11 @@
+Problem: Build a Computer that composes a CPU, RAM, and HardDrive. 
+The computer creates these parts internally based on specs passed to its constructor.
+No component exists outside of a computer, and destroying the computer destroys all its components.
+
+Requirements:
+
+-CPU with a model name and core count. A describe() method that prints the specs.
+-RAM with a size in GB. A describe() method that prints the capacity.
+-HardDrive with a capacity in GB. A describe() method that prints the capacity.
+-Computer that takes spec parameters in its constructor and creates all three components internally. 
+ A describeSpecs() method that prints all component details.
