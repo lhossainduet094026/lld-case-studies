@@ -1,4 +1,4 @@
-package DI.fileConversionSystem;
+package fileConversionSystem;
 
 public class FileConverter {
 
