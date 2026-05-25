@@ -1,0 +1,15 @@
+Exercise 1: File Conversion Service
+
+Design File Conversion Service
+
+Problem: Build a FileConverter that converts files from one format to another. 
+During the convert() method, it depends on a FileReader to read the source file, a FormatParser to parse the content, 
+and a FileWriter to write the output. None of these are stored as fields.
+
+Requirements:
+
+-FileReader with a read(filePath) method that returns the file content as a string.
+-FormatParser with a parse(content, targetFormat) method that returns the converted content.
+-FileWriter with a write(filePath, content) method that writes the content to a file.
+-FileConverter with a convert(sourcePath, targetPath, targetFormat, reader, parser, writer) method that coordinates the three dependencies. 
+No fields.
