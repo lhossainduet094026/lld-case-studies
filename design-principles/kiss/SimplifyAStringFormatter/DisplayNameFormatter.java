@@ -8,6 +8,6 @@ public class DisplayNameFormatter {
 			throw new RuntimeException("Invalid input");
 		
 		name = name.trim();
-		return name.substring(0, 1).toUpperCase() + name.substring(1);
+		return name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
 	}
 }
