@@ -1,7 +1,5 @@
 package srp.refactorOrderServiceGodClass;
 
-import srp.InventoryManager;
-
 public class OrderProcessor {
 
 	private int orderCounter = 0;

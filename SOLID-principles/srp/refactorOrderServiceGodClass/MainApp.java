@@ -1,7 +1,5 @@
 package srp.refactorOrderServiceGodClass;
 
-import srp.InventoryManager;
-
 public class MainApp {
 
 	public static void main(String[] args) {
