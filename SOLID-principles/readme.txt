@@ -62,6 +62,7 @@ Common Pitfalls While Applying LSP:-
 ------------------------------------
 1. Subtyping must be based on behavior, not just taxonomy. A penguin might be a bird in biology,
    but if your Bird interface promises flight, then Penguin is not a valid subtype.
+
 2. Overriding Methods to Do Nothing or Throw Exceptions:
    
    @Override
