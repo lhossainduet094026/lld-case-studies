@@ -153,4 +153,23 @@ class PremiumPaymentService extends PaymentService {
    if (document instanceof ReadOnlyDocument) {
     // Special-case logic
    }
+  
+  
+                 Interface Segregation Principle (ISP)
+                 
+Clients should not be forced to depend on methods they do not use. Each interface should represent a specific capability or behavior. 
+If a class doesn’t need a method, it shouldn’t be forced to implement it.
+
+Each class implements only the interfaces it needs. 
+
+Process should follow to achieve ISP:
+    Design interfaces based on client needs - interfaces should represent a cohesive set of behaviors.
+    that make sense together from the client’s perspective.
+    
+By applying ISP, you make LSP easier to follow because each interface becomes a clean, 
+reliable contract that implementers can fulfill completely and correctly.
+
+
+
+
 
