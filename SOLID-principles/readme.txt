@@ -169,7 +169,68 @@ Process should follow to achieve ISP:
 By applying ISP, you make LSP easier to follow because each interface becomes a clean, 
 reliable contract that implementers can fulfill completely and correctly.
 
+                Dependency Inversion Principle (DIP)
+                
+The legendary Robert C. Martin (Uncle Bob)              
+ 1. high-level modules should never depend directly on low-level modules. Both should depend on abstractions (e.g., interfaces).
+ 2. Abstractions should not depend on details. Details (concrete implementations) should depend on abstractions.
+              
+In plain English:
 
+	Business logic should not rely directly on implementation details.
+	Instead, both should depend on a common interface or abstraction.
 
+Ex: Suppose i have EmailService (high level module) uses GMailClient(low level module).
+EmailService depends directly on GmailClient.
+Now if we want to swap then we need to change in EmailService constructor .violation of DIP.
 
+solution:
+interface EmailClient {
+    void sendEmail(String to, String subject, String body);
+}
 
+Gmail implementation:
+------------------------
+class GmailClientImpl implements EmailClient {
+    @Override
+    public void sendEmail(String to, String subject, String body) {
+        System.out.println("Connecting to Gmail SMTP server...");
+        System.out.println("Sending email via Gmail to: " + to);
+        System.out.println("Subject: " + subject);
+        System.out.println("Body: " + body);
+        // ... actual Gmail API interaction logic ...
+        System.out.println("Gmail email sent successfully!");
+    }
+}
+
+Outlook implementation:
+-------------------------
+class OutlookClientImpl implements EmailClient {
+    @Override
+    public void sendEmail(String to, String subject, String body) {
+        System.out.println("Connecting to Outlook Exchange server...");
+        System.out.println("Sending email via Outlook to: " + to);
+        System.out.println("Subject: " + subject);
+        System.out.println("Body: " + body);
+        // ... actual Outlook API interaction logic ...
+        System.out.println("Outlook email sent successfully!");
+    }
+}
+
+This technique is called Dependency Injection (DI), and it is one of the most common ways to achieve DIP in practice.
+
+class EmailService {
+    private final EmailClient emailClient; // Depends on the INTERFACE!
+
+    // Dependency is "injected" via the constructor
+    public EmailService(EmailClient emailClient) {
+        this.emailClient = emailClient;
+    }
+
+    public void sendWelcomeEmail(String userEmail, String userName) {
+        String subject = "Welcome, " + userName + "!";
+        String body = "Thanks for signing up to our awesome platform. We're glad to have you!";
+        this.emailClient.sendEmail(userEmail, subject, body); // Calls the interface method
+    }
+
+}
