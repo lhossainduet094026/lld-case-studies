@@ -21,9 +21,11 @@ This repository contains hands-on Low-Level Design exercises to practice OOP pri
 
 ## Design Principles
 - Dependency Injection (DI)
-- SOLID Principles (coming soon)
+- Design principles
+- SOLID Principles
 
-## Design Patterns (planned)
+## Design Patterns 
+-Singleton pattern
 - Strategy Pattern
 - Factory Pattern
 - Builder Pattern
