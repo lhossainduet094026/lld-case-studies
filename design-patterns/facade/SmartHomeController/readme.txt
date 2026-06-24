@@ -1,0 +1,11 @@
+Design Smart Home Controller
+
+Problem: Implement a SmartHomeFacade that controls lights, thermostat, and a security system. 
+Provide leaveHome() and arriveHome() methods that coordinate all three subsystems.
+
+Requirements:
+
+leaveHome() turns off lights, sets thermostat to eco mode (18C), arms security system
+arriveHome() turns on lights, sets thermostat to comfort mode (22C), disarms security system
+Each subsystem prints its actions to the console.
+
